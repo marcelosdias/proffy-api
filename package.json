@@ -1,0 +1,37 @@
+{
+  "name": "proffy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "node build/server.js",
+    "build": "tsup src -d build",
+    "knex": "node --import tsx ./node_modules/knex/bin/cli.js",
+    "db:migrate:latest": "node --import tsx ./node_modules/.bin/knex migrate:latest",
+    "db:migrate:rollback": "node --import tsx ./node_modules/.bin/knex migrate:rollback",
+    "test": "vitest --run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.2.2",
+    "@types/node": "^20.14.8",
+    "@types/supertest": "^6.0.2",
+    "eslint": "^8.57.0",
+    "sqlite3": "^5.1.7",
+    "supertest": "^7.0.0",
+    "tsup": "^8.1.0",
+    "tsx": "^4.15.7",
+    "typescript": "^5.5.2",
+    "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.0",
+    "knex": "^3.1.0",
+    "pg": "^8.12.0",
+    "zod": "^3.23.8"
+  }
+}
